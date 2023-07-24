@@ -11,9 +11,9 @@ function get_site_main() {
 	.then(rep => {
 		let data = JSON.parse(rep.substr(47).slice(0, -2));
 		
-		document.getElementByID('hero_title').innerHTML = data.table.rows[0].c[0].v;
-		document.getElementByID('hero_text').innerHTML = data.table.rows[0].c[1].v;
-		document.getElementByID('recent_event').innerHTML = data.table.rows[0].c[2].v;
+		document.getElementById('hero_title').innerHTML = data.table.rows[0].c[0].v;
+		document.getElementById('hero_text').innerHTML = data.table.rows[0].c[1].v;
+		document.getElementById('recent_event').innerHTML = data.table.rows[0].c[2].v;
 	});
 }
 
@@ -34,7 +34,7 @@ function get_photos() {
 			if(left == true) {
 				article = document.createElement('article');
 				article.className = 'from-left';
-				document.getElementByID('photo_gallery').appendChild(article);
+				document.getElementById('photo_gallery').appendChild(article);
 				
 				article.innerHTML = '<a href=\"' + data.table.row[i].c[0].v + '\" class=\"image fit\"><img src=\"' + data.table.row[i].c[1].v + '\" title=\"' + data.table.row[i].c[2].v + '\" alt=\"\" /></a>';
 				

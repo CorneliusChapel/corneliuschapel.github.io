@@ -44,7 +44,7 @@ function get_photos() {
 				article = document.createElement('article');
 				article.className = 'from-right';
 				
-				article.innerHTML = '<a href=\"' + data.table.row[i].c[0].v + '\" class=\"image fit\"><img src=\"' + data.table.row[i].c[1].v + '\" title=\"' + data.table.row[i].c[2].v + '\" alt=\"\" /></a>';
+				article.innerHTML = '<a href=\"' + data.table.rows[i].c[0].v + '\" class=\"image fit\"><img src=\"' + data.table.rows[i].c[1].v + '\" title=\"' + data.table.rows[i].c[2].v + '\" alt=\"\" /></a>';
 				
 				left = true;
 			}

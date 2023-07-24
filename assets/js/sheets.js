@@ -43,6 +43,7 @@ function get_photos() {
 			else {
 				article = document.createElement('article');
 				article.className = 'from-right';
+				document.getElementById('photo_gallery').appendChild(article);
 				
 				article.innerHTML = '<a href=\"' + data.table.rows[i].c[0].v + '\" class=\"image fit\"><img src=\"' + data.table.rows[i].c[1].v + '\" title=\"' + data.table.rows[i].c[2].v + '\" alt=\"\" /></a>';
 				

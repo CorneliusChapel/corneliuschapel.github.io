@@ -19,7 +19,7 @@ function get_site_main() {
 
 function get_photos() {
 	let sheet_title = 'site_photos';
-	let sheet_range = 'A2:B50';
+	let sheet_range = 'A2:C50';
 	
 	let url = 'https://docs.google.com/spreadsheets/d/' + sheet_id + '/gviz/tq?sheet=' + sheet_title + '&range=' + sheet_range
 	
@@ -31,7 +31,7 @@ function get_photos() {
 		let left = true;
 		
 		for(let i = 0; i < data.table.rows.length; i++) {
-			if(left = true;) {
+			if(left == true) {
 				article = document.createElement('article');
 				article.className = 'from-left';
 				document.getElementByID('photo_gallery').appendChild(article);
